@@ -37,7 +37,7 @@ android {
 }
 
 dependencies {
-    val daggerVersion = "2.40"
+    val daggerVersion = "2.51"
     val navigationVersion = "2.7.7"
     val lifecycleVersion = "2.7.0"
     val coroutinesVersion = "1.3.9"
@@ -51,7 +51,9 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
     // Dagger
-    implementation("com.google.dagger:dagger:$daggerVersion")
+    implementation("com.google.dagger:dagger-android:$daggerVersion")
+    implementation("com.google.dagger:dagger-android-support:$daggerVersion")
+    kapt("com.google.dagger:dagger-android-processor:$daggerVersion")
     kapt("com.google.dagger:dagger-compiler:$daggerVersion")
 
     // Navigation
